@@ -1,0 +1,18 @@
+{
+  "extends": ["config:base", ":disableDependencyDashboard"],
+  "packageRules": [
+    {
+      "matchManagers": ["gradle"],
+      "rangeStrategy": "bump"
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "rangeStrategy": "bump"
+    },
+    {
+    "matchPackageNames": ["org.mariuszgromada.math:MathParser.org-mXparser"],
+    "allowedVersions": "<5.0.0"
+    }
+  ],
+  "prHourlyLimit": 50
+}
